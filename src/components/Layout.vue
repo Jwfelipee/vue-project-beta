@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <div class="side">Sidebar</div>
+    <SideBar />
     <div class="content">
       <div class="header">Cabeçalho</div>
       <slot></slot>
@@ -10,8 +10,12 @@
 
 <script>
 import Cookies from "../Cookies";
+import SideBar from "../components/SideBar.vue";
 export default {
   name: "Layout",
+  components: {
+    SideBar,
+  },
   data() {
     return {
       cookies: new Cookies(),
@@ -33,14 +37,6 @@ export default {
   display: flex;
   flex-direction: row;
 }
-.side {
-  max-width: 220px;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  background: rgba(0, 71, 157, 0.571);
-}
-
 .content {
   height: 100%;
   width: 100%;
