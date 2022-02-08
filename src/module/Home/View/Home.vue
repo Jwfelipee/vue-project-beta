@@ -1,5 +1,5 @@
 <template>
-  <div>Homepage</div>
+  <div class="body">teste</div>
 </template>
 
 <script>
@@ -20,4 +20,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.body {
+  padding: 20px;
+}
+</style>
