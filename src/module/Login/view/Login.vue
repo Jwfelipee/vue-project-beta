@@ -7,18 +7,20 @@
       <form @submit="singIn($event)" class="body-login">
         <label>Email</label>
         <Input
-          :value="email"
-          @change="email = $event.target.value"
+          :value="login.email"
+          @change="login.setEmail($event.target.value)"
           type="email"
           placeholder="example@example.com"
           class="input-login"
           autofocus
           required
         />
+
+        {{ login.email }}
         <label>Senha</label>
         <Input
-          :value="password"
-          @change="password = $event.target.value"
+          :value="login.password"
+          @change="login.setPassword($event.target.value)"
           type="password"
           placeholder="********"
           required
@@ -43,25 +45,14 @@ export default {
   name: "Login",
   data() {
     return {
-      email: "dev@admin.com",
-      password: "admin",
-      login: new Login(new FetchAdapter()),
+      login: new Login(new FetchAdapter(), new Cookies()),
       cookies: new Cookies(),
     };
-  },
-  created() {
-    this.cookies.removeToken();
   },
   methods: {
     async singIn(event) {
       event.preventDefault();
-      const res = await this.login.singIn({
-        email: this.email,
-        password: this.password,
-      });
-      const json = await res.json();
-      this.cookies.setToken(json.token);
-      this.$router.push("/home");
+      await this.login.singIn(this);
     },
   },
   components: {

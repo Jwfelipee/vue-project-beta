@@ -6,7 +6,7 @@ import Layout from "../components/Layout.vue";
 const routes = [
   {
     path: "/",
-    component: Login,
+    component: <Login />,
   },
   {
     path: "/login",
