@@ -25,7 +25,7 @@ export default {
   max-width: 220px;
   padding: 10px;
   gap: 15px;
-  background-color: rgba(0, 71, 157, 0.571);
+  background-color: rgba(0, 71, 157, 0.489);
 }
 
 .header {

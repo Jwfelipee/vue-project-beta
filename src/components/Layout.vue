@@ -33,7 +33,7 @@ export default {
 <style scoped>
 .body {
   height: 100vh;
-  background: #cacacaac;
+  background: #fefefe;
   display: flex;
   flex-direction: row;
 }

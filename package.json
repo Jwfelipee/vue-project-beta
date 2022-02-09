@@ -40,5 +40,8 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "optionalDependencies": {
+    "fsevents": "1.2.13"
+  }
 }

@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 .body {
-  background-color: blue;
+  background-color: rgba(0, 71, 157, 0.571);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -124,7 +124,7 @@ label {
 .lost-my-password {
   text-align: center;
   margin-top: 30px;
-  color: green;
+  color: rgba(41, 180, 255, 0.468);
   text-decoration: underline;
   font-size: 14px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

@@ -19,7 +19,7 @@ button {
   margin-top: 30px;
   width: 50%;
   height: 40px;
-  background: green;
+  background: rgba(41, 180, 255, 0.468);
   color: #fefefe;
   cursor: pointer;
 }
