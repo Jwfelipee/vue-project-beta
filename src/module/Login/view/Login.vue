@@ -15,8 +15,6 @@
           autofocus
           required
         />
-
-        {{ login.email }}
         <label>Senha</label>
         <Input
           :value="login.password"
@@ -46,7 +44,6 @@ export default {
   data() {
     return {
       login: new Login(new FetchAdapter(), new Cookies()),
-      cookies: new Cookies(),
     };
   },
   methods: {
