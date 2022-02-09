@@ -2,7 +2,7 @@
   <div class="body">
     <div class="box-login">
       <div class="header-login">
-        <h1>integra Admin</h1>
+        <h1>JWFelipan</h1>
       </div>
       <form @submit="singIn($event)" class="body-login">
         <label>Email</label>
@@ -16,17 +16,9 @@
           required
         />
         <label>Senha</label>
-        <Input
-          :value="login.password"
-          @change="login.setPassword($event.target.value)"
-          type="password"
-          placeholder="********"
-          required
-        />
-        <Button type="submit">Entrar</Button>
-        <router-link to="/lost-password" class="lost-my-password"
-          >Esqueci minha senha</router-link
-        >
+        <Input :value="login.password" @change="login.setPassword($event.target.value)" type="password" placeholder="********" required />
+        <Button type="submit" class="font-bold uppercase text-lg">Entrar</Button>
+        <router-link to="/lost-password" class="lost-my-password">Esqueci minha senha</router-link>
       </form>
     </div>
   </div>
@@ -59,64 +51,39 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .body {
+  @apply h-screen flex justify-center items-center;
   background-color: rgba(0, 71, 157, 0.571);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .box-login {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fefefe;
-  border-radius: 8px;
+  @apply flex items-center flex-col bg-white rounded-lg;
   width: 400px;
   height: 450px;
 }
 
 .header-login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid #646464;
-  width: 80%;
-  margin-bottom: 30px;
+  @apply flex flex-col items-center justify-center border-b-2 border-gray-500 w-4/5 pb-4 mt-6 mb-8;
 }
 
 h1 {
-  color: #646464;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 800;
+  @apply text-gray-700 font-extrabold text-3xl;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .body-login {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+  @apply flex flex-col w-4/5;
 }
 
 label {
-  font-size: 14px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  margin: 10px 0 0 8px;
-  color: #646464;
-  font-weight: 600;
+  @apply text-sm mt-3 ml-2 font-semibold text-gray-700;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .lost-my-password {
-  text-align: center;
-  margin-top: 30px;
-  color: rgba(41, 180, 255, 0.468);
-  text-decoration: underline;
-  font-size: 14px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  cursor: pointer;
+  @apply text-center mt-8 underline text-sm font-bold cursor-pointer;
+  color: rgb(41, 180, 255);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 </style>
