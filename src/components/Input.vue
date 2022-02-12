@@ -9,7 +9,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 input {
   min-width: 150px;
   height: 40px;
@@ -22,5 +22,9 @@ input {
 
 input:focus {
   outline: none;
+}
+
+input {
+  @apply text-gray-700;
 }
 </style>

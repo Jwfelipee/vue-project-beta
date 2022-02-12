@@ -1,1 +1,1 @@
-export const ROUTE = "https://api-peterdrucker.dev.tegra.com.br";
+export const ROUTE = "http://localhost:3000"; // "https://api-peterdrucker.dev.tegra.com.br";

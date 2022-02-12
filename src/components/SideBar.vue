@@ -1,22 +1,36 @@
 <template>
   <div class="side">
     <div class="header"><h1>CABEÇALHO</h1></div>
-    <div class="side-cards">
-      <div class="card-menu">value</div>
-      <div class="card-menu">value</div>
-      <div class="card-menu">value</div>
-      <div class="card-menu">value</div>
+
+    <div class="collapse collapse-arrow">
+      <input type="checkbox" />
+      <div class="collapse-title card-menu gap-1"><IconCollaborator class="w-7 font-extrabold" /> Colaboradores</div>
+
+      <div class="collapse-content card-box-menu">
+        <div @click="changeRoute('/collaborator')" class="card-menu rounded-xl my-3 h-12">Lista</div>
+        <div class="card-menu rounded-xl my-3 h-12">Histórico</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { IconCollaborator } from "../icons/index";
 export default {
   name: "Sidebar",
+
+  components: {
+    IconCollaborator,
+  },
+  methods: {
+    changeRoute(route) {
+      this.$router.push(route);
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .side {
   display: flex;
   flex-direction: column;
@@ -50,13 +64,36 @@ h1 {
   gap: 15px;
 }
 
+.collapse:not(.collapse-open):not(.collapse-close) .collapse-title {
+  border-radius: 8px;
+}
+
+.collapse:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-title {
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.collapse:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-content {
+  padding-bottom: 0 !important;
+}
+
+.card-box-menu {
+  @apply w-full p-0 pb-0 mb-0 rounded-b-xl;
+  background-color: rgb(0, 71, 157) !important;
+}
+
+.card-box-menu:hover {
+  background-color: rgba(0, 71, 157, 0.681) !important;
+}
+
 .card-menu {
+  width: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
   padding-left: 10px;
-  height: 40px;
-  border-radius: 8px;
-  background-color: rgba(0, 71, 157, 0.359);
+  background-color: rgb(0, 71, 157) !important;
 }
 </style>

@@ -17,7 +17,7 @@
         />
         <label>Senha</label>
         <Input :value="login.password" @change="login.setPassword($event.target.value)" type="password" placeholder="********" required />
-        <Button type="submit" class="font-bold uppercase text-lg">Entrar</Button>
+        <Button type="submit" class="font-bold uppercase text-lg mt-6">Entrar</Button>
         <router-link to="/lost-password" class="lost-my-password">Esqueci minha senha</router-link>
       </form>
     </div>
@@ -53,8 +53,7 @@ export default {
 
 <style lang="postcss" scoped>
 .body {
-  @apply h-screen flex justify-center items-center;
-  background-color: rgba(0, 71, 157, 0.571);
+  @apply h-screen flex justify-center items-center bg-blue-300;
 }
 
 .box-login {

@@ -1,5 +1,5 @@
 <template>
-  <div class="body">teste</div>
+  <div>teste</div>
 </template>
 
 <script>
@@ -8,8 +8,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.body {
-  padding: 20px;
-}
-</style>
+<style scoped></style>

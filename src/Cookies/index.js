@@ -7,7 +7,7 @@ export default class Cookies {
   }
 
   setToken(value) {
-    this.cookies?.set("token", value);
+    this.cookies.set("token", value);
   }
 
   getToken() {

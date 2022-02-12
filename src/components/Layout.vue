@@ -3,7 +3,9 @@
     <SideBar />
     <div class="content">
       <div class="header">Cabeçalho</div>
-      <slot></slot>
+      <div class="p-4">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +32,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .body {
   height: 100vh;
   background: #fefefe;
